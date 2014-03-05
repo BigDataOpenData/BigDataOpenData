@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx creator="GPS Visualizer http://www.gpsvisualizer.com/" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<wpt lat="43.25058455" lon="6.59188014"></wpt><wpt lat="43.21909165" lon="6.61258167"></wpt><wpt lat="43.21303746" lon="6.64188717"></wpt><wpt lat="43.22881963" lon="6.65513758"></wpt><wpt lat="43.236675" lon="6.64970833"></wpt><wpt lat="43.26089577" lon="6.63029782"></wpt><wpt lat="43.26508501" lon="6.62478406"></wpt><wpt lat="43.26171984" lon="6.59720443"></wpt><wpt lat="43.26365326" lon="6.57897673"></wpt><wpt lat="43.25006111" lon="6.54464167"></wpt><wpt lat="43.24875502" lon="6.53470963"></wpt><wpt lat="43.25061287" lon="6.52785163"></wpt><wpt lat="43.25192112" lon="6.51958684"></wpt><wpt lat="43.26869749" lon="6.53214972"></wpt><wpt lat="43.27965553" lon="6.57748632"></wpt><wpt lat="43.28481064" lon="6.59582847"></wpt><wpt lat="43.29617456" lon="6.61980548"></wpt><wpt lat="43.30851174" lon="6.63797408"></wpt><wpt lat="43.31537104" lon="6.63620757"></wpt><trk>
+  <name>Arrêts de bus 7753</name>
+  <trkseg>
+    <trkpt lat="43.25058455" lon="6.59188014"></trkpt>
+    <trkpt lat="43.21909165" lon="6.61258167"></trkpt>
+    <trkpt lat="43.21303746" lon="6.64188717"></trkpt>
+    <trkpt lat="43.22881963" lon="6.65513758"></trkpt>
+    <trkpt lat="43.236675" lon="6.64970833"></trkpt>
+    <trkpt lat="43.26089577" lon="6.63029782"></trkpt>
+    <trkpt lat="43.26508501" lon="6.62478406"></trkpt>
+    <trkpt lat="43.26171984" lon="6.59720443"></trkpt>
+    <trkpt lat="43.26365326" lon="6.57897673"></trkpt>
+    <trkpt lat="43.25006111" lon="6.54464167"></trkpt>
+    <trkpt lat="43.24875502" lon="6.53470963"></trkpt>
+    <trkpt lat="43.25061287" lon="6.52785163"></trkpt>
+    <trkpt lat="43.25192112" lon="6.51958684"></trkpt>
+    <trkpt lat="43.26869749" lon="6.53214972"></trkpt>
+    <trkpt lat="43.27965553" lon="6.57748632"></trkpt>
+    <trkpt lat="43.28481064" lon="6.59582847"></trkpt>
+    <trkpt lat="43.29617456" lon="6.61980548"></trkpt>
+    <trkpt lat="43.30851174" lon="6.63797408"></trkpt>
+    <trkpt lat="43.31537104" lon="6.63620757"></trkpt>
+  </trkseg>
+</trk>
+</gpx>
