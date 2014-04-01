@@ -1,0 +1,59 @@
+body
+{
+	background-color: #E0E0E0;
+}
+#map-canvas
+{
+	height: 50%;
+    margin: 0px;
+    padding: 0px
+}
+.obligatoire
+{
+	color:red;
+}
+h2
+{
+	font-size: 120%;
+	/*color:#D90B0B;
+	background-color: #999999;*/
+}
+.conteneur
+{
+	width: 75.2455795678%;
+	margin :0 auto;
+	border : double 3px #E3CDCC;
+	-moz-box-shadow: 1px 1px 12px #555;
+	-webkit-box-shadow: 1px 1px 12px #555;
+	box-shadow: 1px 1px 12px #555;
+	/*padding:1%;*/
+}
+.contenu
+{
+	background-color: white;
+	padding:1%;
+}
+.exemple
+{
+	font-size: 0.8em;
+	font-style: italic;
+}
+.prefixAddress
+{
+
+	height: 200px;
+}
+.fullBloc
+{
+
+	width:100%;
+}
+
+#idLocalisationUtilisation,#idTypeDeTechno,#idNatureOffre
+{
+	background-color: #D1D2E6;
+
+	background: url("../down_arrow_select.jpg") no-repeat right;
+	-webkit-appearance: none;
+
+}
