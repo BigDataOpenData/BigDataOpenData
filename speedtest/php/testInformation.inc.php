@@ -13,11 +13,10 @@
                         $insertionUtilisateur->bindValue(':userTechno',$_POST["technoUtilisateur"],PDO::PARAM_STR);
                         $insertionUtilisateur->execute();
 
-                        $insertionLocalisation=$dbconnexion->prepare("INSERT INTO localisation (mail_user,longitude,latitude,id_user) VALUES (:userMail,:userLon,:userLat,:userId);");
-                        $insertionLocalisation->bindValue(':userMail',$_POST["user_email"],PDO::PARAM_STR);
-                        $insertionLocalisation->bindValue(':userLon',NULL,PDO::PARAM_STR);
-                        $insertionLocalisation->bindValue(':userLat',NULL,PDO::PARAM_STR);
-                        $insertionLocalisation->bindValue(':userId','1',PDO::PARAM_INT);
+                        $insertionLocalisation=$dbconnexion->prepare("INSERT INTO localisation (longitude,latitude,id_user) VALUES (:userLon,:userLat,:userId);");
+                        $insertionLocalisation->bindValue(':userLon',"NULL",PDO::PARAM_STR);
+                        $insertionLocalisation->bindValue(':userLat',"NULL",PDO::PARAM_STR);
+                        $insertionLocalisation->bindValue(':userId',1,PDO::PARAM_INT);
                         $insertionLocalisation->execute(); 
 
                         /*$insertionResultat=$dbconnexion->prepare("INSERT INTO resultat (ping,debit_montant,debit_descendant,) VALUES (:userPing,:userMontant,:userDescendant);");
