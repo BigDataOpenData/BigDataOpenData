@@ -7,7 +7,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
         <script src="http://speedof.me/api/api.js" type="text/javascript"></script>
-        <script type="text/javascript" src="../JS/speedtest.js"></script>
         <link rel="stylesheet" type="text/css" href="../css/main.css" media="all"/>
         <script type="text/javascript" src="../JS/geolocalisation.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnIfQkM1wlqQN_omTeEMala_dHw07NEIY&sensor=false"></script>
@@ -114,7 +113,39 @@
 
                         <ul class="button-group round "> 
                             <li><button id="btnStart" type="button"  onclick="btnStartClick()">Lancer le test</button></li>
-                            <!--<li><button id="idBtnValidation" type="button"  onclick="validerTest()" class="btnValidation">Valider le test</button></li>--> 
+                            <script type="text/javascript">
+								SomApi.account = "SOM532a5597ab34d";   //your API Key here
+								SomApi.domainName = "speedtest";      //your domain or sub-domain here 
+								SomApi.config.sustainTime = 4; 
+								SomApi.onTestCompleted = onTestCompleted;
+								SomApi.onError = onError;
+
+								var msgDiv = document.getElementById("msg");
+											
+								 function btnStartClick() {
+									msgDiv = document.getElementById("msg");
+									msgDiv.innerHTML = "<h3>Speed test in progress. Please wait...</h3>";
+												SomApi.startTest();
+								}
+											
+								function onTestCompleted(testResult) {
+									msgDiv = document.getElementById("msg");
+									msgDiv.innerHTML = 
+									"<h3>"+
+									"Download: "+testResult.download+"<br/>"+
+									"Upload: "+testResult.upload+"<br/>"+
+									"Test Server: "+testResult.testServer+"<br/>"+
+									"IP: "+testResult.ip_address+"<br/>"+
+									"Hostname: "+testResult.hostname+"<br/>"+
+									"</h3>";
+								}
+											
+								function onError(error) {
+									msgDiv = document.getElementById("msg");
+									msgDiv.innerHTML = "Error "+ error.code + ": "+error.message;
+								}
+							</script>
+							<!--<li><button id="idBtnValidation" type="button"  onclick="validerTest()" class="btnValidation">Valider le test</button></li>--> 
                          
                         </ul>
                     

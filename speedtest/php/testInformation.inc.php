@@ -5,7 +5,9 @@
                     try
                     {   
                         /*$_SESSION["user_email"]=$_POST["user_email"];*/
-                                           
+                           
+						/*if $_POST["user_email"] = mail déjà existant, mettre id correspondant*/  
+						/*faire la requête de Kenny pour l'user_id de localisation*/  						
 
                         $insertionUtilisateur=$dbconnexion->prepare("INSERT INTO user (type_user,mail_user,type_technologies_user) VALUES (:userType,:userMail,:userTechno);");
                         $insertionUtilisateur->bindValue(':userType',$_POST["typeUtilisateur"],PDO::PARAM_STR);
