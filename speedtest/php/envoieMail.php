@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    include'connexion.php';
+    include'testInformation.inc.php';
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -8,43 +13,7 @@
         <script type="text/javascript" src="JS/geolocalisation.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnIfQkM1wlqQN_omTeEMala_dHw07NEIY&sensor=false"></script>
         <?php
-            $nom = "";
-            $prenom = "";
-            $tel = "";
-            $mail = "";
-            $subject = "";
-            $message = "";
-            $msg_nom = "";
-            $msg_mail = "";
-            if($_POST){
-                //Récupération des données du formulaire----------------------------
-                $nom = $_POST["nom"];
-                $prenom = $_POST["prenom"];
-                $tel = $_POST["tel"];
-                $mail = $_POST["user_email"];
-                $message = $_POST["resultat"];
-                //------------------------------------------------------------------
-
-                 $destinataire = $mail;
-                 $expediteur   = "mon.adresse@monhebergeur.fr";
-                 $message .= $_POST['mail']."\n";
-                 $message .= $_POST['message']."\n";
-                 /* adresse de l'expéditeur ci-dessous c'est à dire le Site Web */
-                 /* $headers ='From: "SiteWeb"<mon.adresse@monhebergeur.fr>'."\n"; */
-                 $headers ='From: "SiteWeb"<mon.adresse@monhebergeur.fr>'."\n";
-                 $headers .='Reply-To: mon.adresse@monhebergeur.fr'."\n";
-                 $headers .='Content-Type: text/plain; charset="iso-8859-1"'."\n";
-                 $headers .='Content-Transfer-Encoding: 8bit';
-                 /* adresse du destinataire ci-dessous */
-                 if(mail($destinataire, $subject, $message, $headers))
-                 {
-                      echo 'Le message a bien été envoyé';
-                 }
-                 else
-                 {
-                      echo 'Le message n\'a pas pu être envoyé';
-                 }
-            }
+            
         ?>
     </head>
     <body onload="initialize()">

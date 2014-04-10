@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    include'connexion.php';
+?>
 <html class="no-js" lang="fr">
     <head>
         <meta charset="UTF-8">
@@ -25,7 +29,7 @@
                               <span class="prefix"> Support <span class="obligatoire">*</span> </span>
                             </div>
                             <div class="small-9 large-10 columns">
-                                <select class="menuDeroulant fullBlock" id="idLocalisationUtilisation" >
+                                <select class="menuDeroulant name="localisationUtilisation" fullBlock" id="idLocalisationUtilisation" >
                                     <option>Selection</option>
                                     <option>smartphone</option>
                                     <option>ordinateur</option>
@@ -34,9 +38,6 @@
                             </div>
                             
                         </div>
-
-
-                   
                       
                         <br>
 
@@ -54,18 +55,12 @@
                             
                         </div>
 
-
-                    
                         
                         <br>
                         <span class="exemple">n° nom rue, Ville, Pays</span><br>
                         <!--<div id="infoposition"></div>-->
                         <div id="map-canvas"></div>
                         <br>
-
-
-
-
 
                         <div class="row collapse">
                             <div class="small-3 large-2 columns">
@@ -83,7 +78,7 @@
                                 <span class="prefix"> nature de l'offre  <span class="obligatoire">*</span> </span>
                             </div>
                             <div class="small-9 large-10 columns">
-                                <select class="menuDeroulant" id="idNatureOffre">
+                                <select class="menuDeroulant" id="idNatureOffre" name="typeUtilisateur">
                                     <option>Selection</option>
                                     <option>Pro</option>
                                     <option>Grand Public</option>
@@ -102,7 +97,7 @@
                                 <span class="prefix"> Type de technologie  <span class="obligatoire">*</span> </span>
                             </div>
                             <div class="small-9 large-10 columns">
-                                <select class="menuDeroulant" id="idTypeDeTechno">
+                                <select class="menuDeroulant" id="idTypeDeTechno" name="technoUtilisateur">
                                     <option>Selection</option>
                                     <option>DSL</option>
                                     <option>Fibre</option>
@@ -113,23 +108,24 @@
                                 </select>
                             </div>   
                         </div>
-
-
-
-                    
                     
                         <div id="msg" name="resultat"></div>
                         <div id="attentesUtilisateur"></div>
 
                         <ul class="button-group round "> 
                             <li><button id="btnStart" type="button"  onclick="btnStartClick()">Lancer le test</button></li>
-                            <li><button id="idBtnValidation" type="button"  onclick="validerTest()" class="btnValidation">Valider le test</button></li> 
+                            <!--<li><button id="idBtnValidation" type="button"  onclick="validerTest()" class="btnValidation">Valider le test</button></li>--> 
                          
                         </ul>
                     
                     
                     <br>
-                    <input type="submit" class="envoieForm button expand" disabled="disabled" id="btnEnvoie">
+                    <!--
+                                        TO DO
+                                    disabled="disabled" à rajouter
+                    -->
+
+                    <input type="submit" class="envoieForm button expand" name="envoieInformation" id="btnEnvoie">
                 </form>
             </div>
         </div>
