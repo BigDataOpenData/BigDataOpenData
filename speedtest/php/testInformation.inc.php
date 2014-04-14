@@ -20,12 +20,16 @@
                         $insertionLocalisation->bindValue(':userLat',"NULL",PDO::PARAM_STR);
                         $insertionLocalisation->bindValue(':userId',1,PDO::PARAM_INT);
                         $insertionLocalisation->execute(); 
-
-                        /*$insertionResultat=$dbconnexion->prepare("INSERT INTO resultat (ping,debit_montant,debit_descendant,) VALUES (:userPing,:userMontant,:userDescendant);");
-                        $insertionResultat->bindValue(':userPing'," ",PDO::PARAM_STR);
-                        $insertionResultat->bindValue(':userMontant'," ",PDO::PARAM_STR);
-                        $insertionResultat->bindValue(':debit_descendant'," ",PDO::PARAM_STR);
-                        $insertionResultat->execute();*/
+						
+						$Ping = "<script>testResult.testServer;</script>";
+						$Download = "<script>testResult.download;</script>";
+						$Upload = "<script>testResult.upload;</script>";						
+						
+                        $insertionResultat=$dbconnexion->prepare("INSERT INTO resultat (ping,debit_montant,debit_descendant,) VALUES (:userPing,:userMontant,:userDescendant);");
+                        $insertionResultat->bindValue(':userPing',$Ping,PDO::PARAM_INT);
+                        $insertionResultat->bindValue(':userMontant',$Download,PDO::PARAM_STR);
+                        $insertionResultat->bindValue(':userDescendant',$Upload,PDO::PARAM_STR);
+                        $insertionResultat->execute();
                   
                     }
                     catch(PDOException $e)
